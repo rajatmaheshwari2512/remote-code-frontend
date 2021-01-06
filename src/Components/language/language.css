@@ -1,0 +1,13 @@
+#language{
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    height: 50px;
+    width: 20%;
+    font-size: 20px;
+}
+select {
+    background-color:#272822;
+    color: rgba(255, 255, 255, 0.733);
+}
+  

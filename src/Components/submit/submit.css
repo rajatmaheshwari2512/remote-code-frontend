@@ -1,0 +1,14 @@
+#submit{
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    height: 50px;
+    width: 100px;
+    border: none;
+    background-color:#272822;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.699);
+  }
+  #submit:hover{
+    opacity: 0.8;
+  }

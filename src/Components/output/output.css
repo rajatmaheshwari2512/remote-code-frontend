@@ -1,0 +1,21 @@
+#output{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    font-size: 25px;
+    color: #272822;
+    width:43%;
+    height:43%;
+}
+
+#code-results{
+    font-size: 25px;
+    color: #ffffffb4;
+}
+
+#closeDiv{
+    display: flex;
+    justify-content: space-between;
+}
