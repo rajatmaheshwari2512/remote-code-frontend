@@ -1,21 +1,22 @@
-#submit{
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    height: 5%;
-    width: 110px;
-    border: none;
-    background-color:rgb(0, 46, 87);
-    border: 3px solid white;
-    cursor: pointer;
-    color: white;
-    font-size: bolder;
-    border-radius: 6%;
-    -webkit-border-radius: 6%;
-    -moz-border-radius: 6%;
-    -ms-border-radius: 6%;
-    -o-border-radius: 6%;
+#submit {
+  font-size: 1rem;
+  position: absolute;
+  top: 2%;
+  left: 56%;
+  height: 5.2%;
+  width: 110px;
+  background-color: rgb(0, 46, 87);
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+  font-size: bolder;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  z-index: 5;
 }
-  #submit:hover{
-    background-color: rgb(0, 38, 73);
-  }
+#submit:hover {
+  background-color: rgb(0, 38, 73);
+}
