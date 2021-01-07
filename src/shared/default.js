@@ -1,9 +1,9 @@
 const defaultCodePy = `#Your Code Here
   
-  print("Hello World")`;
+print("Hello World")`;
 const defaultCodeJava = `//Your Code Here, class name must be test
   class test{
-    public static voic main(String args[]){
+    public static void main(String args[]){
       System.out.println("Hello World");
     }
   }`;
