@@ -1,14 +1,19 @@
-#language{
-    position: absolute;
-    top: 1%;
-    left: 29%;
-    height: 50px;
-    width: 20%;
-    font-size: 20px;
-    visibility: hidden;
+#language {
+  z-index: 5;
+  position: absolute;
+  top: 2%;
+  left: 40.7%;
+  height: 5.2%;
+  width: 7%;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 12px;
+  outline: none;
+}
+#language:active {
+  outline: none;
 }
 select {
-    background-color:rgb(0,34,64);
-    color: white;
+  background-color: rgb(0, 46, 87);
+  color: white;
 }
-  

@@ -1,4 +1,4 @@
-#input{
+#input {
   position: absolute;
   top: 8%;
   right: 0%;
@@ -6,9 +6,9 @@
   width: 50%;
   font-size: 25px;
   color: #272822;
-  border-left: 4px solid rgb(2, 55, 153);
+  border-left: 4px solid rgb(0, 46, 87);
 }
-.input{
+.input {
   width: 100%;
   height: calc(100% - 37px); /*fontsize+padding = 25px+12px*/
   padding: 12px 20px;
@@ -16,13 +16,14 @@
   border: none;
   overflow: none;
   outline: none;
-  background-color: rgb(0,34,64);
+  background-color: rgb(0, 34, 64);
   color: white;
   resize: none;
   font-size: 15px;
 }
 
-.inputName{
-  background-color: rgb(21,49,75);
+.inputName {
+  background-color: rgb(0, 34, 64);
+  font-size: 20px;
   color: white;
 }
