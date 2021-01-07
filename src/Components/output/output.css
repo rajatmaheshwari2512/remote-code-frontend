@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 55%;
-    left: 55%;
+    top: 50%;
+    right: 0%;
     font-size: 25px;
-    color: #272822;
-    width:43%;
-    height:43%;
+    color: #0d0e0d;
+    width:50%;
+    height:50%;
+    border-left: 4px solid rgb(2, 55, 153);
 }
 
 #code-results{
@@ -17,5 +18,12 @@
 
 #closeDiv{
     display: flex;
+    background-color: rgb(21,49,75);
+    color: white;
     justify-content: space-between;
+}
+
+#clear{
+    font-size: 18px;
+    letter-spacing: 1px;
 }

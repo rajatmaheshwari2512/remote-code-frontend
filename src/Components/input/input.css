@@ -1,21 +1,28 @@
 #input{
-    position: absolute;
-    top: 70%;
-    left: 2%;
-    height: 25%;
-    width: 48%;
-    font-size: 25px;
-    color: #272822;
-  }
-  .input{
-    width: 100%;
-    height: 100%;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 4px;
-    background-color: #272822;
-    color: white;
-    resize: none;
-    font-size: 15px;
-  }
+  position: absolute;
+  top: 8%;
+  right: 0%;
+  height: 50%;
+  width: 50%;
+  font-size: 25px;
+  color: #272822;
+  border-left: 4px solid rgb(2, 55, 153);
+}
+.input{
+  width: 100%;
+  height: calc(100% - 37px); /*fontsize+padding = 25px+12px*/
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  overflow: none;
+  outline: none;
+  background-color: rgb(0,34,64);
+  color: white;
+  resize: none;
+  font-size: 15px;
+}
+
+.inputName{
+  background-color: rgb(21,49,75);
+  color: white;
+}

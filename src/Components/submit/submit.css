@@ -1,14 +1,21 @@
 #submit{
     position: absolute;
-    top: 55%;
-    left: 45%;
-    height: 50px;
-    width: 100px;
+    top: 0%;
+    right: 0%;
+    height: 5%;
+    width: 110px;
     border: none;
-    background-color:#272822;
+    background-color:rgb(0, 46, 87);
+    border: 3px solid white;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.699);
-  }
+    color: white;
+    font-size: bolder;
+    border-radius: 6%;
+    -webkit-border-radius: 6%;
+    -moz-border-radius: 6%;
+    -ms-border-radius: 6%;
+    -o-border-radius: 6%;
+}
   #submit:hover{
-    opacity: 0.8;
+    background-color: rgb(0, 38, 73);
   }

@@ -1,13 +1,14 @@
 #language{
     position: absolute;
-    top: 55%;
-    left: 2%;
+    top: 1%;
+    left: 29%;
     height: 50px;
     width: 20%;
     font-size: 20px;
+    visibility: hidden;
 }
 select {
-    background-color:#272822;
-    color: rgba(255, 255, 255, 0.733);
+    background-color:rgb(0,34,64);
+    color: white;
 }
   

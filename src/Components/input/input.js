@@ -9,9 +9,10 @@ const Input = props =>{
 
 
     const content =(
-        <div id="input">Custom Input
-              <textarea className='input' name='input' onChange={inputChange} value={props.input}></textarea>        
-          </div>
+        <div id="input">
+            <div class='inputName'>&nbsp;Custom Input</div>
+            <textarea className='input' name='input' onChange={inputChange} value={props.input}></textarea>        
+        </div>
     );
     return content;
 }
