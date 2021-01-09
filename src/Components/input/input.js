@@ -10,7 +10,7 @@ const Input = props =>{
 
     const content =(
         <div id="input">
-            <div class='inputName'>&nbsp;Custom Input</div>
+            <div className='inputName'>&nbsp;Custom Input</div>
             <textarea className='input' name='input' onChange={inputChange} value={props.input}></textarea>        
         </div>
     );

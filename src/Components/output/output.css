@@ -35,3 +35,13 @@
 #clear:hover {
   background-color: rgb(0, 50, 97);
 }
+
+@media only screen and (max-width:720px){
+  #output{
+    position: absolute;
+    border-left: none;
+    border-top:4px solid rgb(0, 46, 87) ;
+    top: 141.5%;
+    width: 100%;
+  }
+}
