@@ -2,7 +2,7 @@
   position: absolute;
   top: 8%;
   right: 0%;
-  height: 50%;
+  height: 43%;
   width: 50%;
   font-size: 25px;
   color: #272822;
@@ -26,4 +26,14 @@
   background-color: rgb(0, 34, 64);
   font-size: 20px;
   color: white;
+}
+
+@media only screen and (max-width:720px){
+  #input{
+    position: absolute;
+    border-left: none;
+    border-top:4px solid rgb(0, 46, 87) ;
+    top: 100%;
+    width: 100%;
+  }
 }

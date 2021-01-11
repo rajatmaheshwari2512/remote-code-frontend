@@ -50,3 +50,9 @@
   background-color: rgb(98, 110, 227);
   cursor: pointer;
 }
+
+@media only screen and (max-width:720px){
+  #fontSize{
+    visibility: hidden;
+  }
+}

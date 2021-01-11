@@ -13,10 +13,11 @@ const Code = (props) => {
   };
 
   const content = (
-    <AceEditor
+    <div id='editor'>
+      <AceEditor
       mode={props.mode}
-      width="50%"
-      height="92vh"
+      width="100%"
+      height="100%"
       value={props.code}
       theme="cobalt"
       fontSize={props.fontSize}
@@ -29,6 +30,7 @@ const Code = (props) => {
         enableSnippets: true,
       }}
     />
+    </div>
   );
   return content;
 };
