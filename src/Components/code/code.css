@@ -11,5 +11,6 @@
 @media only screen and (max-width:720px){
   #editor{
     width: 100%;
+    border-right:none;
   }
 }

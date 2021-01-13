@@ -1,10 +1,12 @@
-import React from "react";
+import React,{ useState } from "react";
 import "./submit.css";
 import fetch from "cross-fetch";
 
 const Submit = (props) => {
+  const [click,setClick]=useState(false);
   const handleRun = (e) => {
     e.preventDefault();
+    setClick(true);
     fetch("http://15.207.111.86:3001/codeupload", {
       method: "POST",
       headers: {
@@ -18,6 +20,7 @@ const Submit = (props) => {
     })
       .then((resp) => resp.json())
       .then((result) => {
+	setClick(false);
         console.log(result);
         if (result.stdout) {
           props.changeRes(result.stdout);
@@ -28,13 +31,14 @@ const Submit = (props) => {
         }
       })
       .catch((err) => {
+	setClick(false);
         props.changeRes("Something went Wrong");
         console.log(err);
       });
   };
 
   const content = (
-    <button id="submit" onClick={handleRun}>
+    <button disabled={click} id="submit" onClick={handleRun}>
       RUN CODE
     </button>
   );
