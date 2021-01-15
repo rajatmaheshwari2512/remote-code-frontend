@@ -1,13 +1,13 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import "./submit.css";
 import fetch from "cross-fetch";
 
 const Submit = (props) => {
-  const [click,setClick]=useState(false);
+  const [click, setClick] = useState(false);
   const handleRun = (e) => {
     e.preventDefault();
     setClick(true);
-    fetch("http://15.207.111.86:3001/codeupload", {
+    fetch("http://localhost:3001/codeupload", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,18 +20,27 @@ const Submit = (props) => {
     })
       .then((resp) => resp.json())
       .then((result) => {
-	setClick(false);
+        setClick(false);
         console.log(result);
         if (result.stdout) {
           props.changeRes(result.stdout);
+          props.socket.emit("sendOutput", result.stdout, () =>
+            console.log("Output Sent")
+          );
         } else if (result.stderr) {
           props.changeRes(result.stderr);
+          props.socket.emit("sendOutput", result.stderr, () =>
+            console.log("Output Sent")
+          );
         } else {
           props.changeRes("No Output");
+          props.socket.emit("sendOutput", "No Output", () =>
+            console.log("Output Sent")
+          );
         }
       })
       .catch((err) => {
-	setClick(false);
+        setClick(false);
         props.changeRes("Something went Wrong");
         console.log(err);
       });
