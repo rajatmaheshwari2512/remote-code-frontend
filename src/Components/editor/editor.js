@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./editor.css";
 import Code from "../code/code";
 import Input from "../input/input";
@@ -13,8 +17,14 @@ import queryString from "query-string";
 const ENDPOINT = "http://localhost:3001";
 
 let socket;
+toast.configure();
 
 const App = ({ location }) => {
+  window.addEventListener("beforeunload", (ev) => {
+    ev.preventDefault();
+    socket.emit("disconnect");
+  });
+  const history = useHistory();
   const [code, changeCode] = useState(defaultCodeC);
   const [mode, changeMode] = useState("c_cpp");
   const [language, changeLanguage] = useState("1");
@@ -34,12 +44,16 @@ const App = ({ location }) => {
 
     socket.emit("join", { name, room }, (error) => {
       if (error) {
-        alert(error);
+        history.push("/");
+        toast.error(error);
       }
     });
   }, [ENDPOINT, location.search]);
 
   useEffect(() => {
+    socket.on("welcomeMessage", (message) => {
+      toast.success(message.text);
+    });
     socket.on("code", (message) => {
       changeCode(message.text);
     });
@@ -52,11 +66,12 @@ const App = ({ location }) => {
     socket.on("font", (message) => {
       changeFontSize(message.text);
     });
-    socket.on("default", (message) => {
-      changeLanguage(message.text);
+    socket.on("mode", (message) => {
+      changeMode(message.text);
     });
     socket.on("lang", (message) => {
-      changeMode(message.text);
+      console.log(language);
+      changeLanguage(message.text);
     });
   }, []);
 

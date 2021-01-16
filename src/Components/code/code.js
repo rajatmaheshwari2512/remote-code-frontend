@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AceEditor from "react-ace";
 import "./code.css";
 import "ace-builds/src-noconflict/mode-java";
