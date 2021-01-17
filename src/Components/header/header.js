@@ -20,7 +20,7 @@ const Header = (props) => {
         {props.fontSize}
       </div>
       <div
-        id="dropMenu"
+        id="dropMenu2"
         style={{ visibility: props.visi ? "hidden" : "visible" }}
       >
         <div onClick={sizeChng}>14px</div>

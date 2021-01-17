@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./submit.css";
 import fetch from "cross-fetch";
+import env from "react-dotenv";
 
 const Submit = (props) => {
   const [click, setClick] = useState(false);
   const handleRun = (e) => {
     e.preventDefault();
     setClick(true);
-    fetch("http://localhost:3001/codeupload", {
+    fetch(env.FETCH, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -3,9 +3,11 @@ import "./language.css";
 import { defaultCodeC } from "../../shared/default";
 import { defaultCodeJava } from "../../shared/default";
 import { defaultCodePy } from "../../shared/default";
+import { choiceToText } from "./choiceToText";
 const Language = (props) => {
   const langChange = (newVal) => {
-    newVal = newVal.target.value;
+    newVal = newVal.target.className;
+    console.log(newVal);
     props.changeLanguage(newVal);
     props.socket.emit("sendLang", newVal, () => console.log("Language Sent"));
     if (newVal === "1") {
@@ -30,14 +32,32 @@ const Language = (props) => {
       );
       props.socket.emit("sendMode", "java", () => console.log("Mode Sent"));
     }
+    props.changeVisi(!props.visi);
   };
-
+  const dropMenu = () => {
+    console.log(props.visi);
+    props.changeVisi(!props.visi);
+  };
   const content = (
-    <select id="language" name="language" onChange={langChange}>
-      <option value="1">C++</option>
-      <option value="2">Python</option>
-      <option value="3">Java</option>
-    </select>
+    <>
+      <div id="language" onClick={dropMenu}>
+        <div id="nameOfLang">{choiceToText[props.language]}</div>
+      </div>
+      <div
+        id="dropMenu"
+        style={{ visibility: props.visi ? "hidden" : "visible" }}
+      >
+        <div id="options" className="1" onClick={langChange}>
+          C++
+        </div>
+        <div id="options" className="2" onClick={langChange}>
+          Python
+        </div>
+        <div id="options" className="3" onClick={langChange}>
+          Java
+        </div>
+      </div>
+    </>
   );
   return content;
 };

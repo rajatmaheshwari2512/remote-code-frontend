@@ -29,7 +29,7 @@
 #fontSize:hover {
   background-color: rgb(0, 38, 73);
 }
-#dropMenu {
+#dropMenu2 {
   position: relative;
   top: 30%;
   left: 49%;
@@ -39,20 +39,20 @@
   border: 2px solid white;
   border-radius: 12px;
 }
-#dropMenu div {
+#dropMenu2 div {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   color: white;
 }
-#dropMenu div:hover {
+#dropMenu2 div:hover {
   background-color: rgb(98, 110, 227);
   cursor: pointer;
 }
 
-@media only screen and (max-width:720px){
-  #fontSize{
+@media only screen and (max-width: 720px) {
+  #fontSize {
     visibility: hidden;
   }
 }

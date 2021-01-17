@@ -1,10 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Editor from "./Components/editor/editor";
 import Join from "./Components/join/join";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
+require("dotenv").config();
 const App = () => {
   return (
     <Router>
