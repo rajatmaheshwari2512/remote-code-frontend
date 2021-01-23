@@ -1,4 +1,4 @@
 window.env = {
-  "ENDPOINT": "http://localhost:3001",
-  "FETCH": "http://localhost:3001/codeupload"
+  "ENDPOINT": "http://192.168.1.8:3001",
+  "FETCH": "http://192.168.1.8:3001/codeupload"
 };

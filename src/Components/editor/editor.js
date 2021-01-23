@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import env from "react-dotenv";
+import { Offline } from "react-detect-offline";
 
 import "./editor.css";
 import Code from "../code/code";
@@ -36,6 +37,11 @@ const App = ({ location }) => {
   const [langVisi, changeLangVisi] = useState(true);
   const [room, setRoom] = useState("");
   const [name, setName] = useState("");
+
+  function goHome() {
+    toast.error("Your internet has been lost, please login again");
+    history.push("/");
+  }
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -114,6 +120,7 @@ const App = ({ location }) => {
         changeRes={changeRes}
         socket={socket}
       />
+      <Offline onChange={goHome}></Offline>
     </div>
   );
   return content;
