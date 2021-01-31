@@ -56,7 +56,8 @@ Salient Features:
 - Timeout to prevent the user from spamming the run code button and triggering a DoS attack
 - Adequate toasts have been implemented so that anyone in the room is alerted if anyone joins or leaves
 - No duplicate usernames are allowed
-- In case a user loses internet, he will be taken back to the Join Page, and will be prompted to login again.
+- In case a user loses internet, he will be taken back to the Join Page, and will be prompted to login again
+- Completely responsive so people on mobile can use this RCE as well.
 
 ### Built With
 
