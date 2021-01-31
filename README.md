@@ -105,6 +105,7 @@ To get a local copy up and running follow these simple steps.
   ```sh
   yarn start
   ```
+- It is important to note that you will have to setup environment variables to the appropriate endpoints, should you deploy this locally or somewhere else
 
 <!-- ROADMAP -->
 
