@@ -86,7 +86,7 @@ To get a local copy up and running follow these simple steps.
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/rajatmaheshwari2512/Online-IDE-FrontEnd
+   git clone https://github.com/rajatmaheshwari2512/remote-code-frontend
    ```
 2. Install NPM packages
    ```sh
@@ -114,7 +114,7 @@ To get a local copy up and running follow these simple steps.
 
 ## Roadmap
 
-See the [open issues](https://github.com/rajatmaheshwari2512/Online-IDE-FrontEnd/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/rajatmaheshwari2512/remote-code-frontend/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -140,11 +140,11 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Rajat Maheshwari - mrajat67@yahoo.com
 
-Project Link: [https://github.com/rajatmaheshwari2512/Online-IDE-FrontEnd](https://github.com/rajatmaheshwari2512/Online-IDE-FrontEnd)
+Project Link: [https://github.com/rajatmaheshwari2512/remote-code-frontend](https://github.com/rajatmaheshwari2512/remote-code-frontend)
 
-Site Link: [SwaggerUI Link](http://13.233.119.34:3001/)
+Site Link: [SwaggerUI Link](http://65.0.131.144:3001/)
 
-Main Site Link: [FrontEnd UI](http://13.233.119.34:3000/)
+Main Site Link: [FrontEnd UI](http://rceui.ml/)
 
 
 ## Deployment
