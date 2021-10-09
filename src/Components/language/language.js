@@ -3,6 +3,7 @@ import "./language.css";
 import { defaultCodeC } from "../../shared/default";
 import { defaultCodeJava } from "../../shared/default";
 import { defaultCodePy } from "../../shared/default";
+import { defaultCodeGo } from "../../shared/default";
 import { choiceToText } from "./choiceToText";
 const Language = (props) => {
   const langChange = (newVal) => {
@@ -31,6 +32,13 @@ const Language = (props) => {
         console.log("Mode Sent")
       );
       props.socket.emit("sendMode", "java", () => console.log("Mode Sent"));
+    } else if (newVal === "4") {
+      props.mode("go");
+      props.code(defaultCodeGo);
+      props.socket.emit("sendCode", defaultCodeGo, () =>
+        console.log("Mode Sent")
+      );
+      props.socket.emit("sendMode", "go", () => console.log("Mode Sent"));
     }
     props.changeVisi(!props.visi);
   };
@@ -55,6 +63,9 @@ const Language = (props) => {
         </div>
         <div id="options" className="3" onClick={langChange}>
           Java
+        </div>
+        <div id="options" className="4" onClick={langChange}>
+          Go
         </div>
       </div>
     </>
