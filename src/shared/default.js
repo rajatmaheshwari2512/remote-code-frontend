@@ -14,6 +14,18 @@ int main() {
     std::cout << "Hello World!";
     return 0;
 }`;
+const defaultCodeGo = `//Your code here 
+
+
+package main
+
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello World!")
+}`;
 exports.defaultCodeC = defaultCodeC;
+exports.defaultCodeGo = defaultCodeGo;
 exports.defaultCodePy = defaultCodePy;
 exports.defaultCodeJava = defaultCodeJava;
