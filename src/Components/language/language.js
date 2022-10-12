@@ -1,5 +1,6 @@
 import React from "react";
 import "./language.css";
+import { defaultCodeCPP } from "../../shared/default";
 import { defaultCodeC } from "../../shared/default";
 import { defaultCodeJava } from "../../shared/default";
 import { defaultCodePy } from "../../shared/default";
@@ -13,8 +14,8 @@ const Language = (props) => {
     props.socket.emit("sendLang", newVal, () => console.log("Language Sent"));
     if (newVal === "1") {
       props.mode("c_cpp");
-      props.code(defaultCodeC);
-      props.socket.emit("sendCode", defaultCodeC, () =>
+      props.code(defaultCodeCPP);
+      props.socket.emit("sendCode", defaultCodeCPP, () =>
         console.log("Code Sent")
       );
       props.socket.emit("sendMode", "c_cpp", () => console.log("Mode Sent"));
@@ -39,6 +40,13 @@ const Language = (props) => {
         console.log("Mode Sent")
       );
       props.socket.emit("sendMode", "go", () => console.log("Mode Sent"));
+    } else if (newVal === "5") {
+      props.mode("c_cpp");
+      props.code(defaultCodeC);
+      props.socket.emit("sendCode", defaultCodeC, () =>
+        console.log("Mode Sent")
+      );
+      props.socket.emit("sendMode", "c_cpp", () => console.log("Mode Sent"));
     }
     props.changeVisi(!props.visi);
   };
