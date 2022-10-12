@@ -7,7 +7,7 @@ class test{
     System.out.println("Hello World!");
   }
 }`;
-const defaultCodeC = `//Your Code Here
+const defaultCodeCPP = `//Your Code Here
 
 #include <iostream>
 int main() {
@@ -25,6 +25,16 @@ import "fmt"
 func main() {
     fmt.Println("Hello World!")
 }`;
+
+const defaultCodeC = `//Your Code Here
+
+#include <iostream>
+int main() {
+    printf("Hello World!");
+    return 0;
+}`;
+
+exports.defaultCodeCPP = defaultCodeCPP;
 exports.defaultCodeC = defaultCodeC;
 exports.defaultCodeGo = defaultCodeGo;
 exports.defaultCodePy = defaultCodePy;

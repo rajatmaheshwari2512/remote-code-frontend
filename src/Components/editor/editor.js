@@ -12,7 +12,7 @@ import Output from "../output/output";
 import Header from "../header/header";
 import Language from "../language/language";
 import Submit from "../submit/submit";
-import { defaultCodeC } from "../../shared/default";
+import { defaultCodeCPP } from "../../shared/default";
 import io from "socket.io-client";
 import queryString from "query-string";
 
@@ -27,7 +27,7 @@ const App = ({ location }) => {
     socket.emit("disconnect");
   });
   const history = useHistory();
-  const [code, changeCode] = useState(defaultCodeC);
+  const [code, changeCode] = useState(defaultCodeCPP);
   const [mode, changeMode] = useState("c_cpp");
   const [language, changeLanguage] = useState("1");
   const [input, changeInput] = useState("");
